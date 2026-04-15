@@ -28,4 +28,5 @@ jobs:
         generateReleaseNotes: true
         tag: nightly
         prerelease: true
+        allowUpdates: true
         artifacts: ${{ steps.export.outputs.archive_directory }}/*
