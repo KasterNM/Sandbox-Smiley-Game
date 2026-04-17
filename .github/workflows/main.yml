@@ -22,7 +22,7 @@ jobs:
         archive_output: true
 
     - name: create release
-      uses: ncipollo/release-action@v1.21.0
+      uses: ncipollo/release-action@latest
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         generateReleaseNotes: true
