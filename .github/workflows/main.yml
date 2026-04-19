@@ -37,12 +37,14 @@ jobs:
         removeArtifacts: true
         artifacts: ${{ steps.export.outputs.archive_directory }}/*
 
-    - name: Setup Pages
+    - name: setup pages
       uses: actions/configure-pages@v4
-    - name: Upload artifact
+      
+    - name: upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
         path: '/home/runner/.local/share/godot/builds/Web/'
-    - name: Deploy to GitHub Pages
+        
+    - name: deploy to github pages
       id: deployment
       uses: actions/deploy-pages@v4
