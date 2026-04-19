@@ -14,6 +14,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     name: Export Game
     steps:
+    
     - name: Checkout
       uses: actions/checkout@v5
   
@@ -40,10 +41,16 @@ jobs:
     - name: Setup Pages
       uses: actions/configure-pages@v4
       
+    - name: Move Nightly Folder
+      run: |
+        mkdir -p gh-pages/play/nightly/
+        mv /home/runner/.local/share/godot/builds/Web/* gh-pages/play/nightly/
+        mv gh-pages/play/nightly/web.html gh-pages/play/nightly/index.html
+      
     - name: Upload Artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: '/home/runner/.local/share/godot/builds/Web/'
+        path: 'gh-pages/'
         
     - name: Deploy to GitHub Pages
       id: deployment
