@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var speed := 384.0
 @export var acceleration := 4.0
 @export var friction := 10.0
-@export var jump_strength := 464.0
+@export var jump_strength := 416.0
 @export var gravity := 1536.0
 @export var max_fall_speed := 1024.0
 @export var no_clip: bool = false:
