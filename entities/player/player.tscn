@@ -7,9 +7,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgqql"]
 size = Vector2(14, 14)
 
-[node name="Player" type="CharacterBody2D" unique_id=1128906518 node_paths=PackedStringArray("collision_shape_2d")]
+[node name="Player" type="CharacterBody2D" unique_id=1128906518]
 script = ExtResource("1_6t5aa")
-collision_shape_2d = NodePath("CollisionShape2D")
 
 [node name="SpriteBody" type="Sprite2D" parent="." unique_id=1736214287]
 texture = ExtResource("1_cvnsp")

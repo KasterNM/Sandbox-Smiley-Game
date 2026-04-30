@@ -15,7 +15,7 @@ extends CharacterBody2D
 		if Global.ui:
 			Global.ui.update_no_clip_button()
 
-@export var collision_shape_2d: CollisionShape2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 
 func _process(delta: float) -> void:
